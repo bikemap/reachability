@@ -46,7 +46,7 @@ is called when there is a change in the network status.
 
 ```swift
   Reachability { status, from in
-    if status == .online from == .cellular {
+    if status == .online && from == .cellular {
       // User just joined a wifi.
       // Continue download or something.
     }
