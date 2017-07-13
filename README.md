@@ -5,10 +5,11 @@ It provides very simple interaction with the network status. And
 honestly, that is all you need, no-one cares about the 
 `interventionRequired` state.
 
-You have three options:
-- online
-- cellular
-- offline
+You have four options:
+- `online`
+- `cellular`
+- `offline`
+- `unkown`
 
 And there is a convenience `isOnline` parameter.
 
@@ -22,8 +23,7 @@ You can use Reachability to query the current status.
   let reachability = Reachability()
   print(reachability.status)
 
-
-  if reachability.isOnline() {
+  if reachability.isOnline {
     // True, when on wifi or on cellular network.
   }
 ```
