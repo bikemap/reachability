@@ -165,9 +165,6 @@ final public class Reachability {
 
     // Mind the `passRetained` here. As the class might not be retained at
     // the caller function, we retain it here.
-
-    log.verbose("retain", CFGetRetainCount(self))
-
     context.info = UnsafeMutableRawPointer(
       Unmanaged<Reachability>.passRetained(self).toOpaque())
 
